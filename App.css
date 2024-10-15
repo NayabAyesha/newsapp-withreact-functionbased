@@ -1,0 +1,265 @@
+body {
+  background-color: rgb(12, 49, 12);
+  font-family: Arial, sans-serif; /* Added a default font */
+  margin: 0; /* Ensure no default margins */
+}
+
+* {
+  box-sizing: border-box; /* Ensures padding and borders don't affect total width */
+}
+
+.footer {
+  background-color: rgb(9, 12, 9);
+  color: white;
+  text-align: center;
+  padding: 15px; /* Increased padding for better spacing */
+  position: relative;
+  bottom: 0; /* Adjusted position */
+  width: 100%;
+}
+
+.logo {
+  width: 30%;
+  display: flex;
+  color: black;
+  align-items: center; /* Center align logo items */
+}
+
+.logo img {
+  width: 40%; /* Increased logo size */
+  border: 3px solid beige;
+}
+
+.form-inline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0; /* Simplified margin */
+}
+
+.form-control {
+  padding: 10px; /* Increased padding */
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.btn {
+  background-color: lavender;
+  color: black; /* Changed text color for better contrast */
+  border: none;
+  padding: 10px 16px; /* Increased padding */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: rgb(10, 20, 10); /* Changed hover color */
+  color: white; /* White text on hover */
+}
+
+@media (max-width: 768px) {
+  .form-control {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .form-inline {
+    flex-direction: column;
+  }
+}
+
+.name {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.navbar {
+  background-color: rgb(11, 26, 11);
+  display: flex;
+  padding: 10px; /* Added padding for better spacing */
+  position: sticky; /* Make the navbar sticky */
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+nav {
+  display: flex;
+  text-align: right;
+  flex: 1; /* Allow nav to take full width */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0; /* Reset padding */
+}
+
+nav li {
+  height: 50px;
+}
+
+nav ul a {
+  height: 100%;
+  padding: 0 20px; /* Reduced padding */
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center; /* Centered text vertically */
+}
+
+.form-group {
+  background-color: rgb(11, 26, 11);
+  margin: 10px; /* Increased margin */
+  padding: 10px; /* Increased padding */
+  border-radius: 8px; /* Rounded corners */
+  width: 100%;
+  text-align: center;
+}
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 20px; /* space between cards */
+  color: white;
+}
+
+.news-item {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(11, 26, 11);
+  color: white;
+}
+.form-group a {
+  color: black;
+  text-decoration: none;
+  background-color: black;
+}
+.card-body a{
+  background-color: black;
+  color: white;
+}
+.button-container {
+  display: flex;
+  justify-content: space-between; /* This creates space between the two buttons */
+  width: 100%; /* Ensure the container spans the full width */
+}
+
+.prev, .next {
+  background-color: rgb(10, 20, 10);
+  color: white; /* Changed text color for better contrast */
+  border: none;
+  padding: 10px 16px; /* Increased padding */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.text-muted
+{
+  color: bold white !important;
+}
+.prev:hover, .next:hover {
+  background-color: rgb(20, 27, 21); /* Changed hover color */
+  color: black; /* White text on hover */
+}
+
+.container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px 0; /* Simplified margin */
+}
+
+.rightnav {
+  color: lightsalmon;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.news-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+  align-items: center;
+
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white; /* Changed heading color for better contrast */
+}
+
+.news-row-1 {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of items */
+  justify-content: space-between; /* Space between columns */
+  margin-bottom: 20px; /* Space below the row */
+}
+
+.news-col {
+  flex: 0 0 calc(33.33% - 20px); /* Each column will take about 33.33% of the row minus some margin */
+  margin: 10px; /* Margin around each column for spacing */
+  background-color: rgb(11, 26, 11);
+  display: flex; /* Use flexbox to center content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.news-col:first-child {
+  margin-left: 0;
+}
+
+.news-col:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  .news-col {
+    flex: 1 0 100%; /* Full width on small screens */
+    margin-bottom: 15px; /* Margin below each column */
+  }
+}
+
+/* Additional NewsItem styles */
+.card {
+  width: 100%; /* Makes sure the card takes full width of the column */
+  max-width: 350px; /* Optional: Set a max width for better centering */
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex; /* Use flexbox to ensure image and body are aligned */
+  flex-direction: column; /* Arrange contents in a column */
+  align-items: center; /* Center the card content */
+}
+
+.card-img-top {
+  width: 100%; /* Ensure the image takes full width of the card */
+  height: 150px; /* Fixed height */
+  object-fit: cover; /* Maintain aspect ratio */
+  border-radius: 8px 8px 0 0; /* Rounded corners */
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-align: center; /* Center the title */
+}
+
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  text-align: center; /* Center the text */
+}
